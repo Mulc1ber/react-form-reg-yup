@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Input = ({ name, type, placeholder, register }) => {
-    return <input name={name} type={type} placeholder={placeholder} {...register} />;
+export const Input = ({ register, ...rest }) => {
+    return <input {...register} {...rest} />;
 };

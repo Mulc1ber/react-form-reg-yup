@@ -3,11 +3,11 @@ import { Input } from '../Input/Input';
 import { Label } from '../Label/Label';
 import { Error } from '../Error/Error';
 
-export const Field = ({ name, title, type, placeholder, register, textError }) => {
+export const Field = ({ name, title, textError, ...rest }) => {
     return (
         <div>
             <Label name={name} title={title} />
-            <Input name={name} type={type} placeholder={placeholder} register={register} />
+            <Input name={name} {...rest} />
             <Error textError={textError} />
         </div>
     );
